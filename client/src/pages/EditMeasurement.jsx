@@ -194,7 +194,7 @@ export default function EditMeasurement() {
                   <input
                     type="number"
                     {...formik.getFieldProps(field.name)}
-                    className="w-full text-center text-2xl font-bold bg-transparent text-blue-400 focus:outline-none"
+                    className="w-full text-center text-2xl font-bold bg-transparent text-blue-400 focus:outline-none appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-inner-spin-button]:m-0"
                   />
                   {formik.touched[field.name] && formik.errors[field.name] ? (
                     <p className="mt-1 text-xs text-red-400">
