@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaUser, FaPhone, FaRuler, FaEdit } from "react-icons/fa"; // Importing FaEdit for the button
 import BackButton from "../components/BackButton";
-
-const BASE_URL = "http://localhost:5000/api/measure";
+import { API_BASE_URL } from "../config";
+const BASE_URL = `${API_BASE_URL}/api/measure`;
 
 export default function MeasurementDetail() {
   const { id } = useParams();

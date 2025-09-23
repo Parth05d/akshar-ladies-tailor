@@ -6,8 +6,8 @@ import * as Yup from "yup";
 import { useSnackbar } from "notistack";
 import BackButton from "../components/BackButton";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
-const BASE_URL = "http://localhost:5000/api/user";
+import { API_BASE_URL } from "../config";
+const BASE_URL = `${API_BASE_URL}/api/user`;
 
 export default function Profile() {
   const navigate = useNavigate();

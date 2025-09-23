@@ -6,8 +6,8 @@ import { useSnackbar } from "notistack";
 import axios from "axios";
 import { FaUser, FaPhone, FaRuler } from "react-icons/fa"; // Using react-icons for a modern look
 import BackButton from "../components/BackButton";
-
-const BASE_URL = "http://localhost:5000/api/measure";
+import { API_BASE_URL } from "../config";
+const BASE_URL = `${API_BASE_URL}/api/measure`;
 const EDIT_MEASURE = `${BASE_URL}/edit-measure`;
 
 // Validation Schema

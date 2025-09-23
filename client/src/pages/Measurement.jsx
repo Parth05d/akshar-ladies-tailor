@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useSnackbar } from "notistack";
 import { FaPlus, FaSearch } from "react-icons/fa";
-
-const BASE_URL = "http://localhost:5000/api/measure";
+import { API_BASE_URL } from "../config";
+const BASE_URL = `${API_BASE_URL}/api/measure`;
 
 export default function Measurement() {
   const [names, setNames] = useState([]);
