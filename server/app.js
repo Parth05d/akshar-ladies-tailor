@@ -10,6 +10,7 @@ dotenv.config({ path: ".env" });
 // Ensure database is connected once when the module is loaded
 connectDb();
 
+const app = express();
 app.use(
   cors({
     origin: [
@@ -21,7 +22,6 @@ app.use(
     credentials: true,
   })
 );
-const app = express();
 
 // Middlewares
 app.use(express.json());
