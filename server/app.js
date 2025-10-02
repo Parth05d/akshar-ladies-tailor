@@ -14,7 +14,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      // Production frontend
+      "https://akshar-ladies-tailor.vercel.app", // Production frontend
       "http://localhost:5000", // Common local dev server
       "http://localhost:5173", // Another common one (e.g., Vite)
     ],
