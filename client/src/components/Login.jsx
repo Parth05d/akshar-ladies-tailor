@@ -60,7 +60,7 @@ export default function Login({ user, setUser }) {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.username}
-          className="mb-1 bg-zinc-700 dark:bg-zinc-800 rounded-2xl px-4 py-3 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+          className="mb-3 bg-zinc-700 dark:bg-zinc-800 rounded-2xl px-4 py-3 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
         />
         {formik.touched.username && formik.errors.username && (
           <p className="mb-3 text-sm text-red-400">{formik.errors.username}</p>
@@ -92,7 +92,7 @@ export default function Login({ user, setUser }) {
         <button
           type="submit"
           disabled={formik.isSubmitting}
-          className="w-full py-3 bg-blue-600 hover:bg-blue-700 disabled:opacity-70 rounded-2xl font-semibold text-lg transition"
+          className="mt-3 w-full py-3 bg-blue-600 hover:bg-blue-700 disabled:opacity-70 rounded-2xl font-semibold text-lg transition"
         >
           Login
         </button>
