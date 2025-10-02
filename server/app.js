@@ -10,6 +10,17 @@ dotenv.config({ path: ".env" });
 // Ensure database is connected once when the module is loaded
 connectDb();
 
+app.use(
+  cors({
+    origin: [
+      // Production frontend
+      "http://localhost:5000", // Common local dev server
+      "http://localhost:5173", // Another common one (e.g., Vite)
+    ],
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 const app = express();
 
 // Middlewares
