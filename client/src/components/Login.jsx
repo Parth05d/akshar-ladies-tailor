@@ -22,8 +22,12 @@ export default function Login({ user, setUser }) {
         .required("Password is required"),
     }),
     onSubmit: async (values) => {
+      const loginValues = {
+        ...values,
+        username: values.username.toLowerCase(),
+      };
       try {
-        const res = await axios.post(`${BASE_URL}/login`, values);
+        const res = await axios.post(`${BASE_URL}/login`, loginValues);
         localStorage.setItem("token", res.data.token);
         setUser({ username: res.data.username, email: res.data.email });
         enqueueSnackbar("Logged in successfully", { variant: "success" });
